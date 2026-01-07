@@ -1,0 +1,195 @@
+---
+repository:
+  vcs:
+    type: "Git"
+    url: "git@github.com:GeorgeVernonTeledyne/ort-unmanaged-includes.git"
+    revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+    path: ""
+  vcs_processed:
+    type: "Git"
+    url: "ssh://git@github.com/GeorgeVernonTeledyne/ort-unmanaged-includes.git"
+    revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+    path: ""
+  config:
+    includes:
+      paths:
+      - pattern: "src/**"
+        reason: "SOURCE_OF"
+analyzer:
+  start_time: "2026-01-07T16:09:37.253137167Z"
+  end_time: "2026-01-07T16:09:37.430609695Z"
+  environment:
+    ort_version: "72.1.0"
+    build_jdk: "21.0.9+10-LTS"
+    java_version: "21.0.9"
+    os: "Linux"
+    processors: 24
+    max_memory: 16777216000
+    variables:
+      HOME: "/home/gvernon"
+      JAVA_HOME: "/opt/java/openjdk"
+      ANDROID_HOME: "/opt/android-sdk"
+  config:
+    allow_dynamic_versions: false
+    enabled_package_managers:
+    - "Bazel"
+    - "Bower"
+    - "Bundler"
+    - "Cargo"
+    - "Carthage"
+    - "CocoaPods"
+    - "Composer"
+    - "Conan"
+    - "GoMod"
+    - "GradleInspector"
+    - "Maven"
+    - "NPM"
+    - "NuGet"
+    - "PIP"
+    - "Pipenv"
+    - "PNPM"
+    - "Poetry"
+    - "Pub"
+    - "SBT"
+    - "SpdxDocumentFile"
+    - "Stack"
+    - "SwiftPM"
+    - "Tycho"
+    - "Unmanaged"
+    - "Yarn"
+    - "Yarn2"
+    skip_excluded: false
+  result:
+    projects:
+    - id: "Unmanaged::ort-unmanaged-includes:f174da74c8667c3b8fd7385978921180b24c571d"
+      definition_file_path: ""
+      declared_licenses: []
+      declared_licenses_processed: {}
+      vcs:
+        type: ""
+        url: ""
+        revision: ""
+        path: ""
+      vcs_processed:
+        type: "Git"
+        url: "git@github.com:GeorgeVernonTeledyne/ort-unmanaged-includes.git"
+        revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+        path: ""
+      homepage_url: ""
+      scopes: []
+    packages: []
+scanner:
+  start_time: "2026-01-07T16:09:39.797030174Z"
+  end_time: "2026-01-07T16:09:57.855994716Z"
+  environment:
+    ort_version: "72.1.0"
+    build_jdk: "21.0.9+10-LTS"
+    java_version: "21.0.9"
+    os: "Linux"
+    processors: 24
+    max_memory: 16777216000
+    variables:
+      HOME: "/home/gvernon"
+      JAVA_HOME: "/opt/java/openjdk"
+      ANDROID_HOME: "/opt/android-sdk"
+  config:
+    skip_concluded: false
+    skip_excluded: false
+    include_files_without_findings: false
+    detected_license_mapping:
+      LicenseRef-scancode-agpl-generic-additional-terms: "NOASSERTION"
+      LicenseRef-scancode-free-unknown: "NOASSERTION"
+      LicenseRef-scancode-generic-cla: "NOASSERTION"
+      LicenseRef-scancode-generic-exception: "NOASSERTION"
+      LicenseRef-scancode-generic-export-compliance: "NOASSERTION"
+      LicenseRef-scancode-generic-tos: "NOASSERTION"
+      LicenseRef-scancode-generic-trademark: "NOASSERTION"
+      LicenseRef-scancode-gpl-generic-additional-terms: "NOASSERTION"
+      LicenseRef-scancode-other-copyleft: "NOASSERTION"
+      LicenseRef-scancode-other-permissive: "NOASSERTION"
+      LicenseRef-scancode-patent-disclaimer: "NOASSERTION"
+      LicenseRef-scancode-unknown: "NOASSERTION"
+      LicenseRef-scancode-unknown-license-reference: "NOASSERTION"
+      LicenseRef-scancode-unknown-spdx: "NOASSERTION"
+      LicenseRef-scancode-warranty-disclaimer: "NOASSERTION"
+    ignore_patterns:
+    - "**/*.ort.yml"
+    - "**/*.spdx.yml"
+    - "**/*.spdx.yaml"
+    - "**/*.spdx.json"
+    - "**/META-INF/DEPENDENCIES"
+    - "**/META-INF/DEPENDENCIES.txt"
+    - "**/META-INF/NOTICE"
+    - "**/META-INF/NOTICE.txt"
+  provenances:
+  - id: "Unmanaged::ort-unmanaged-includes:f174da74c8667c3b8fd7385978921180b24c571d"
+    package_provenance:
+      vcs_info:
+        type: "Git"
+        url: "git@github.com:GeorgeVernonTeledyne/ort-unmanaged-includes.git"
+        revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+        path: ""
+      resolved_revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+  scan_results:
+  - provenance:
+      vcs_info:
+        type: "Git"
+        url: "git@github.com:GeorgeVernonTeledyne/ort-unmanaged-includes.git"
+        revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+        path: ""
+      resolved_revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+    scanner:
+      name: "ScanCode"
+      version: "32.4.1"
+      configuration: "--copyright --license --info --strip-root --timeout 300 --json"
+    summary:
+      start_time: "2026-01-07T16:09:50.000530768Z"
+      end_time: "2026-01-07T16:09:52.000278425Z"
+      licenses:
+      - license: "BSD-3-Clause"
+        location:
+          path: "no_redistribute/main.c"
+          start_line: 1
+          end_line: 1
+        score: 100.0
+      - license: "MIT"
+        location:
+          path: "src/main.c"
+          start_line: 1
+          end_line: 1
+        score: 100.0
+  scanners:
+    Unmanaged::ort-unmanaged-includes:f174da74c8667c3b8fd7385978921180b24c571d:
+    - "ScanCode"
+  files:
+  - provenance:
+      vcs_info:
+        type: "Git"
+        url: "git@github.com:GeorgeVernonTeledyne/ort-unmanaged-includes.git"
+        revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+        path: ""
+      resolved_revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+    files:
+    - path: ".gitignore"
+      sha1: "662a64d218288a9c1431e87e8f57ef43df091490"
+    - path: ".ort.yml"
+      sha1: "204423cf380dd394912c854c6db34870bf33b6e6"
+    - path: "docker_run.sh"
+      sha1: "c7969af7dab1b029edbd3aa3917284a59d6d2353"
+    - path: "no_redistribute/main.c"
+      sha1: "0c8d465b9ab4f7b451163f0fb7ca05446d29a15d"
+    - path: "src/main.c"
+      sha1: "20307bb2738d2fda820ad269ac1dd7eca67229de"
+advisor: null
+evaluator: null
+resolved_configuration:
+  package_curations:
+  - provider:
+      id: "DefaultDir"
+    curations: []
+  - provider:
+      id: "DefaultFile"
+    curations: []
+  - provider:
+      id: "Spring"
+    curations: []
