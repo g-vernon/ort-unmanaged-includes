@@ -22,7 +22,6 @@ function run_ort {
 run_ort analyze -i . -o .
 run_ort scan -i analyzer-result.yml -o .
 run_ort report \
-    -f PlainTextTemplate \
-    -f WebApp \
+    -f PlainTextTemplate,WebApp \
     -O PlainTextTemplate=template.id=NOTICE_DEFAULT \
     -i scan-result.yml -o .
