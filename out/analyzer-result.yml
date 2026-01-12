@@ -2,31 +2,33 @@
 repository:
   vcs:
     type: "Git"
-    url: "git@github.com:GeorgeVernonTeledyne/ort-unmanaged-includes.git"
-    revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+    url: "git@github.com:g-vernon/ort-unmanaged-includes.git"
+    revision: "05c6f674eb2c5cc9715ed669aebf2d6d72c27df9"
     path: ""
   vcs_processed:
     type: "Git"
-    url: "ssh://git@github.com/GeorgeVernonTeledyne/ort-unmanaged-includes.git"
-    revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+    url: "ssh://git@github.com/g-vernon/ort-unmanaged-includes.git"
+    revision: "05c6f674eb2c5cc9715ed669aebf2d6d72c27df9"
     path: ""
   config:
     includes:
       paths:
       - pattern: "src/**"
         reason: "SOURCE_OF"
+      - pattern: "lib/**"
+        reason: "SOURCE_OF"
 analyzer:
-  start_time: "2026-01-07T16:09:37.253137167Z"
-  end_time: "2026-01-07T16:09:37.430609695Z"
+  start_time: "2026-01-12T21:57:06.156850014Z"
+  end_time: "2026-01-12T21:57:06.393409800Z"
   environment:
-    ort_version: "72.1.0"
+    ort_version: "DOCKER-SNAPSHOT"
     build_jdk: "21.0.9+10-LTS"
     java_version: "21.0.9"
     os: "Linux"
-    processors: 24
-    max_memory: 16777216000
+    processors: 16
+    max_memory: 8199864320
     variables:
-      HOME: "/home/gvernon"
+      HOME: "/home/george"
       JAVA_HOME: "/opt/java/openjdk"
       ANDROID_HOME: "/opt/android-sdk"
   config:
@@ -40,11 +42,13 @@ analyzer:
     - "CocoaPods"
     - "Composer"
     - "Conan"
+    - "Gleam"
     - "GoMod"
     - "GradleInspector"
     - "Maven"
     - "NPM"
     - "NuGet"
+    - "OrtProjectFile"
     - "PIP"
     - "Pipenv"
     - "PNPM"
@@ -61,23 +65,50 @@ analyzer:
     skip_excluded: false
   result:
     projects:
-    - id: "Unmanaged::ort-unmanaged-includes:f174da74c8667c3b8fd7385978921180b24c571d"
-      definition_file_path: ""
+    - id: "OrtProjectFile::examplesaurus:"
+      definition_file_path: "/"
       declared_licenses: []
       declared_licenses_processed: {}
       vcs:
-        type: ""
-        url: ""
-        revision: ""
+        type: "Git"
+        url: "ssh://git@github.com/g-vernon/ort-unmanaged-includes.git"
+        revision: "05c6f674eb2c5cc9715ed669aebf2d6d72c27df9"
         path: ""
       vcs_processed:
         type: "Git"
-        url: "git@github.com:GeorgeVernonTeledyne/ort-unmanaged-includes.git"
-        revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+        url: "ssh://git@github.com/g-vernon/ort-unmanaged-includes.git"
+        revision: "05c6f674eb2c5cc9715ed669aebf2d6d72c27df9"
         path: ""
+      description: "Foo description"
       homepage_url: ""
       scopes: []
-    packages: []
+    packages:
+    - id: "pkg:unmanaged//foo@0.0.1::"
+      purl: "pkg:generic/unmanaged//foo%400.0.1/"
+      declared_licenses: []
+      declared_licenses_processed: {}
+      description: "Foo library"
+      homepage_url: ""
+      binary_artifact:
+        url: ""
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: ""
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/g-vernon/ort-unmanaged-includes"
+        revision: "master"
+        path: "lib"
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/g-vernon/ort-unmanaged-includes.git"
+        revision: "master"
+        path: "lib"
 scanner: null
 advisor: null
 evaluator: null

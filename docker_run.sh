@@ -15,7 +15,7 @@ function run_ort {
         -e HOME=$HOME \
         -v $PWD:/workdir \
         -w /workdir \
-        ghcr.io/oss-review-toolkit/ort \
+        ort \
         $@
 }
 

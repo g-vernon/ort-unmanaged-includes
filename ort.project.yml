@@ -1,0 +1,10 @@
+projectName: "examplesaurus"
+description: "Foo description"
+dependencies:
+  - id: "pkg:unmanaged//foo@0.0.1"
+    description: "Foo library"
+    vcs:
+      type: "git"
+      url: "https://github.com/g-vernon/ort-unmanaged-includes"
+      revision: "master"
+      path: "lib"

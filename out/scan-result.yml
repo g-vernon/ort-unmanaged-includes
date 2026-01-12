@@ -2,31 +2,33 @@
 repository:
   vcs:
     type: "Git"
-    url: "git@github.com:GeorgeVernonTeledyne/ort-unmanaged-includes.git"
-    revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+    url: "git@github.com:g-vernon/ort-unmanaged-includes.git"
+    revision: "05c6f674eb2c5cc9715ed669aebf2d6d72c27df9"
     path: ""
   vcs_processed:
     type: "Git"
-    url: "ssh://git@github.com/GeorgeVernonTeledyne/ort-unmanaged-includes.git"
-    revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+    url: "ssh://git@github.com/g-vernon/ort-unmanaged-includes.git"
+    revision: "05c6f674eb2c5cc9715ed669aebf2d6d72c27df9"
     path: ""
   config:
     includes:
       paths:
       - pattern: "src/**"
         reason: "SOURCE_OF"
+      - pattern: "lib/**"
+        reason: "SOURCE_OF"
 analyzer:
-  start_time: "2026-01-07T16:09:37.253137167Z"
-  end_time: "2026-01-07T16:09:37.430609695Z"
+  start_time: "2026-01-12T21:57:06.156850014Z"
+  end_time: "2026-01-12T21:57:06.393409800Z"
   environment:
-    ort_version: "72.1.0"
+    ort_version: "DOCKER-SNAPSHOT"
     build_jdk: "21.0.9+10-LTS"
     java_version: "21.0.9"
     os: "Linux"
-    processors: 24
-    max_memory: 16777216000
+    processors: 16
+    max_memory: 8199864320
     variables:
-      HOME: "/home/gvernon"
+      HOME: "/home/george"
       JAVA_HOME: "/opt/java/openjdk"
       ANDROID_HOME: "/opt/android-sdk"
   config:
@@ -40,11 +42,13 @@ analyzer:
     - "CocoaPods"
     - "Composer"
     - "Conan"
+    - "Gleam"
     - "GoMod"
     - "GradleInspector"
     - "Maven"
     - "NPM"
     - "NuGet"
+    - "OrtProjectFile"
     - "PIP"
     - "Pipenv"
     - "PNPM"
@@ -61,35 +65,62 @@ analyzer:
     skip_excluded: false
   result:
     projects:
-    - id: "Unmanaged::ort-unmanaged-includes:f174da74c8667c3b8fd7385978921180b24c571d"
-      definition_file_path: ""
+    - id: "OrtProjectFile::examplesaurus:"
+      definition_file_path: "/"
       declared_licenses: []
       declared_licenses_processed: {}
       vcs:
-        type: ""
-        url: ""
-        revision: ""
+        type: "Git"
+        url: "ssh://git@github.com/g-vernon/ort-unmanaged-includes.git"
+        revision: "05c6f674eb2c5cc9715ed669aebf2d6d72c27df9"
         path: ""
       vcs_processed:
         type: "Git"
-        url: "git@github.com:GeorgeVernonTeledyne/ort-unmanaged-includes.git"
-        revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+        url: "ssh://git@github.com/g-vernon/ort-unmanaged-includes.git"
+        revision: "05c6f674eb2c5cc9715ed669aebf2d6d72c27df9"
         path: ""
+      description: "Foo description"
       homepage_url: ""
       scopes: []
-    packages: []
+    packages:
+    - id: "pkg:unmanaged//foo@0.0.1::"
+      purl: "pkg:generic/unmanaged//foo%400.0.1/"
+      declared_licenses: []
+      declared_licenses_processed: {}
+      description: "Foo library"
+      homepage_url: ""
+      binary_artifact:
+        url: ""
+        hash:
+          value: ""
+          algorithm: ""
+      source_artifact:
+        url: ""
+        hash:
+          value: ""
+          algorithm: ""
+      vcs:
+        type: "Git"
+        url: "https://github.com/g-vernon/ort-unmanaged-includes"
+        revision: "master"
+        path: "lib"
+      vcs_processed:
+        type: "Git"
+        url: "https://github.com/g-vernon/ort-unmanaged-includes.git"
+        revision: "master"
+        path: "lib"
 scanner:
-  start_time: "2026-01-07T16:09:39.797030174Z"
-  end_time: "2026-01-07T16:09:57.855994716Z"
+  start_time: "2026-01-12T21:57:09.968248462Z"
+  end_time: "2026-01-12T21:58:40.874547277Z"
   environment:
-    ort_version: "72.1.0"
+    ort_version: "DOCKER-SNAPSHOT"
     build_jdk: "21.0.9+10-LTS"
     java_version: "21.0.9"
     os: "Linux"
-    processors: 24
-    max_memory: 16777216000
+    processors: 16
+    max_memory: 8199864320
     variables:
-      HOME: "/home/gvernon"
+      HOME: "/home/george"
       JAVA_HOME: "/opt/java/openjdk"
       ANDROID_HOME: "/opt/android-sdk"
   config:
@@ -122,35 +153,136 @@ scanner:
     - "**/META-INF/NOTICE"
     - "**/META-INF/NOTICE.txt"
   provenances:
-  - id: "Unmanaged::ort-unmanaged-includes:f174da74c8667c3b8fd7385978921180b24c571d"
+  - id: "OrtProjectFile::examplesaurus:"
     package_provenance:
       vcs_info:
         type: "Git"
-        url: "git@github.com:GeorgeVernonTeledyne/ort-unmanaged-includes.git"
-        revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+        url: "ssh://git@github.com/g-vernon/ort-unmanaged-includes.git"
+        revision: "05c6f674eb2c5cc9715ed669aebf2d6d72c27df9"
         path: ""
-      resolved_revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+      resolved_revision: "05c6f674eb2c5cc9715ed669aebf2d6d72c27df9"
+  - id: "pkg:unmanaged//foo@0.0.1::"
+    package_provenance:
+      vcs_info:
+        type: "Git"
+        url: "https://github.com/g-vernon/ort-unmanaged-includes.git"
+        revision: "master"
+        path: "lib"
+      resolved_revision: "05c6f674eb2c5cc9715ed669aebf2d6d72c27df9"
   scan_results:
   - provenance:
       vcs_info:
         type: "Git"
-        url: "git@github.com:GeorgeVernonTeledyne/ort-unmanaged-includes.git"
-        revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+        url: "https://github.com/g-vernon/ort-unmanaged-includes.git"
+        revision: "05c6f674eb2c5cc9715ed669aebf2d6d72c27df9"
         path: ""
-      resolved_revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+      resolved_revision: "05c6f674eb2c5cc9715ed669aebf2d6d72c27df9"
     scanner:
       name: "ScanCode"
       version: "32.4.1"
       configuration: "--copyright --license --info --strip-root --timeout 300 --json"
     summary:
-      start_time: "2026-01-07T16:09:50.000530768Z"
-      end_time: "2026-01-07T16:09:52.000278425Z"
+      start_time: "2026-01-12T21:58:05.000607296Z"
+      end_time: "2026-01-12T21:58:38.000238965Z"
       licenses:
+      - license: "BSD-2-Clause"
+        location:
+          path: "lib/foolib/foolib.c"
+          start_line: 1
+          end_line: 1
+        score: 100.0
+  - provenance:
+      vcs_info:
+        type: "Git"
+        url: "ssh://git@github.com/g-vernon/ort-unmanaged-includes.git"
+        revision: "05c6f674eb2c5cc9715ed669aebf2d6d72c27df9"
+        path: ""
+      resolved_revision: "05c6f674eb2c5cc9715ed669aebf2d6d72c27df9"
+    scanner:
+      name: "ScanCode"
+      version: "32.4.1"
+      configuration: "--copyright --license --info --strip-root --timeout 300 --json"
+    summary:
+      start_time: "2026-01-12T21:57:21.000643514Z"
+      end_time: "2026-01-12T21:57:54.000743992Z"
+      licenses:
+      - license: "Apache-2.0"
+        location:
+          path: "out/scan-report-web-app.html"
+          start_line: 4
+          end_line: 14
+        score: 100.0
+      - license: "Apache-2.0"
+        location:
+          path: "out/scan-report-web-app.html"
+          start_line: 16
+          end_line: 16
+        score: 100.0
+      - license: "Apache-2.0"
+        location:
+          path: "out/scan-report-web-app.html"
+          start_line: 433
+          end_line: 433
+        score: 100.0
+      - license: "BSD-2-Clause"
+        location:
+          path: "lib/foolib/foolib.c"
+          start_line: 1
+          end_line: 1
+        score: 100.0
       - license: "BSD-3-Clause"
         location:
           path: "no_redistribute/main.c"
           start_line: 1
           end_line: 1
+        score: 100.0
+      - license: "BSD-3-Clause"
+        location:
+          path: "out/scan-result.yml"
+          start_line: 149
+          end_line: 149
+        score: 100.0
+      - license: "MIT"
+        location:
+          path: "out/scan-report-web-app.html"
+          start_line: 34
+          end_line: 35
+        score: 100.0
+      - license: "MIT"
+        location:
+          path: "out/scan-report-web-app.html"
+          start_line: 42
+          end_line: 43
+        score: 100.0
+      - license: "MIT"
+        location:
+          path: "out/scan-report-web-app.html"
+          start_line: 50
+          end_line: 51
+        score: 100.0
+      - license: "MIT"
+        location:
+          path: "out/scan-report-web-app.html"
+          start_line: 58
+          end_line: 59
+        score: 100.0
+      - license: "MIT"
+        location:
+          path: "out/scan-report-web-app.html"
+          start_line: 70
+          end_line: 71
+        score: 100.0
+      - license: "MIT"
+        location:
+          path: "out/scan-report-web-app.html"
+          start_line: 133
+          end_line: 134
+        score: 100.0
+      - license: "MIT"
+        location:
+          path: "out/scan-result.yml"
+          start_line: 155
+          end_line: 155
         score: 100.0
       - license: "MIT"
         location:
@@ -158,26 +290,100 @@ scanner:
           start_line: 1
           end_line: 1
         score: 100.0
+      - license: "MIT AND Zlib"
+        location:
+          path: "out/scan-report-web-app.html"
+          start_line: 67
+          end_line: 67
+        score: 100.0
+      copyrights:
+      - statement: "Copyright (c) 2017 The ORT Project Authors see https://github.com/oss-review-toolkit/ort/blob/main/NOTICE"
+        location:
+          path: "out/scan-report-web-app.html"
+          start_line: 2
+          end_line: 2
+      - statement: "Copyright (c) 2018 Jed Watson"
+        location:
+          path: "out/scan-report-web-app.html"
+          start_line: 69
+          end_line: 69
+      - statement: "Copyright (c) Facebook, Inc. and its affiliates"
+        location:
+          path: "out/scan-report-web-app.html"
+          start_line: 32
+          end_line: 32
+      - statement: "Copyright (c) Facebook, Inc. and its affiliates"
+        location:
+          path: "out/scan-report-web-app.html"
+          start_line: 40
+          end_line: 40
+      - statement: "Copyright (c) Facebook, Inc. and its affiliates"
+        location:
+          path: "out/scan-report-web-app.html"
+          start_line: 48
+          end_line: 48
+      - statement: "Copyright (c) Facebook, Inc. and its affiliates"
+        location:
+          path: "out/scan-report-web-app.html"
+          start_line: 56
+          end_line: 56
+      - statement: "Copyright (c) Facebook, Inc. and its affiliates"
+        location:
+          path: "out/scan-report-web-app.html"
+          start_line: 131
+          end_line: 131
   scanners:
-    Unmanaged::ort-unmanaged-includes:f174da74c8667c3b8fd7385978921180b24c571d:
+    'OrtProjectFile::examplesaurus:':
+    - "ScanCode"
+    'pkg:unmanaged//foo@0.0.1::':
     - "ScanCode"
   files:
   - provenance:
       vcs_info:
         type: "Git"
-        url: "git@github.com:GeorgeVernonTeledyne/ort-unmanaged-includes.git"
-        revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+        url: "https://github.com/g-vernon/ort-unmanaged-includes.git"
+        revision: "05c6f674eb2c5cc9715ed669aebf2d6d72c27df9"
         path: ""
-      resolved_revision: "f174da74c8667c3b8fd7385978921180b24c571d"
+      resolved_revision: "05c6f674eb2c5cc9715ed669aebf2d6d72c27df9"
+    files:
+    - path: "lib/foolib/.gitignore"
+      sha1: "dd54c87f3d9318e6ba2a3b7ff457d55430f834a4"
+    - path: "lib/foolib/Makefile"
+      sha1: "915d14d6ee3d3155cb1199c60c497f1c24f307f0"
+    - path: "lib/foolib/foolib.c"
+      sha1: "a8a554324a3819199df2702b135ce07c5d627699"
+  - provenance:
+      vcs_info:
+        type: "Git"
+        url: "ssh://git@github.com/g-vernon/ort-unmanaged-includes.git"
+        revision: "05c6f674eb2c5cc9715ed669aebf2d6d72c27df9"
+        path: ""
+      resolved_revision: "05c6f674eb2c5cc9715ed669aebf2d6d72c27df9"
     files:
     - path: ".gitignore"
       sha1: "662a64d218288a9c1431e87e8f57ef43df091490"
     - path: ".ort.yml"
-      sha1: "204423cf380dd394912c854c6db34870bf33b6e6"
+      sha1: "0054a6992c9bf800313b2b2f127ba8161012d774"
     - path: "docker_run.sh"
-      sha1: "c7969af7dab1b029edbd3aa3917284a59d6d2353"
+      sha1: "d006d89344006e0c662994705b3787cddf8cf344"
+    - path: "lib/foolib/.gitignore"
+      sha1: "dd54c87f3d9318e6ba2a3b7ff457d55430f834a4"
+    - path: "lib/foolib/Makefile"
+      sha1: "915d14d6ee3d3155cb1199c60c497f1c24f307f0"
+    - path: "lib/foolib/foolib.c"
+      sha1: "a8a554324a3819199df2702b135ce07c5d627699"
     - path: "no_redistribute/main.c"
       sha1: "0c8d465b9ab4f7b451163f0fb7ca05446d29a15d"
+    - path: "ort.project.yml"
+      sha1: "faca1933d1dc9d74ac443f0f0141feb1b0298fb7"
+    - path: "out/NOTICE_DEFAULT"
+      sha1: "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    - path: "out/analyzer-result.yml"
+      sha1: "3abeb5915459ec14a5c1d57a77626e3457fa2b56"
+    - path: "out/scan-report-web-app.html"
+      sha1: "e2dc644dd2a1d7893eab0033f7f6fa7623ad8a16"
+    - path: "out/scan-result.yml"
+      sha1: "1745e68ae125e30fb084b80de7962ffd54672851"
     - path: "src/main.c"
       sha1: "20307bb2738d2fda820ad269ac1dd7eca67229de"
 advisor: null

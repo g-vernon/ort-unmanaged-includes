@@ -2,3 +2,5 @@ includes:
   paths:
   - pattern: "src/**"
     reason: "SOURCE_OF"
+  - pattern: "lib/**"
+    reason: "SOURCE_OF"
