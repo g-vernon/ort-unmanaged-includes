@@ -1,7 +1,7 @@
 projectName: "examplesaurus"
 description: "Foo description"
 dependencies:
-  - id: "pkg:unmanaged//foo@0.0.1"
+  - purl: "pkg:unmanaged//foo@0.0.1"
     description: "Foo library"
     vcs:
       type: "git"
