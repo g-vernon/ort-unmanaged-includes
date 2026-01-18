@@ -5,6 +5,6 @@ dependencies:
     description: "Foo library"
     vcs:
       type: "git"
-      url: "https://github.com/g-vernon/ort-unmanaged-includes"
+      url: "git@github.com:g-vernon/ort-unmanaged-includes.git"
       revision: "master"
       path: "lib"
